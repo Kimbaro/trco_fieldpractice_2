@@ -1,0 +1,4 @@
+#Thu Nov 21 14:18:58 KST 2019
+base.0=/Users/dongyounkim/Documents/TRcoProject2/appdir2_unity/2019-11-15_01/build/finalpj/build/intermediates/transforms/dexMerger/debug/0
+path.0=classes.dex
+renamed.0=classes.dex

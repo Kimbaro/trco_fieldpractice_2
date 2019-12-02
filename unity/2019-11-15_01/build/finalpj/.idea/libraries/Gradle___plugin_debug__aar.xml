@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: :plugin-debug:@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/295ca1c8aa428e7cc8f65d3064bdb588/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/295ca1c8aa428e7cc8f65d3064bdb588/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

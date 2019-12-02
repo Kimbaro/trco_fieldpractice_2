@@ -1,0 +1,340 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:2:1-109:12
+INJECTED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:2:1-109:12
+INJECTED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:2:1-109:12
+INJECTED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:2:1-109:12
+MERGED from [:plugin-debug:] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/3f8987ffe89ab4b565e11618a63d2524/AndroidManifest.xml:2:1-13:12
+MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/ccc0cf7f22bbae1b31f4444e2e5ef5f5/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/3183b892f608d85e0fac75ce4800d9fb/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/b412787baefa49cc6729f7b125045b62/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:28.0.0] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/b6aaa6038eda2eb367cf2f911078c49a/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/56a5f87eb5fbebd30e8947f4d6e8a613/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:28.0.0] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/8856e39748ab577e3771456b13bdb017/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:28.0.0] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/7a60a0c6067cf0be207fea0c4a032d79/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/7b944d35e17e12892994751f1df09052/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:loader:28.0.0] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/fcf33a1dea3afac21483d25ff5a00cb0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:viewpager:28.0.0] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/0e76c4ff2df737e33eaadfaa0ffd0e8e/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/58bd0d975b584078afe4cb69fff80e78/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:drawerlayout:28.0.0] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/9bf0ada3089c3551d346037e677cc69f/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/2e82989457728e858f46cbeb4b964161/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customview:28.0.0] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/bd46fb0c5cc09ef08f99e43d502d0431/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/a586ae75f41293d8fa4ad9f292193cce/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/8da99c758c9acbcec4ea09b8799fc456/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:28.0.0] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/1a2f1a7b56abf3ead7d2a10f54ce405c/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/79dc2d1bd89eb4545d5211224b24dff2/AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:cursoradapter:28.0.0] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/96ec3525d54dba123ebed2e3e351e9d1/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/c3fe535905d0c74703a218514c17a3ca/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:documentfile:28.0.0] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/ea983c296979a56b2cdbc04b001ccaa0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/3feb910cd0e1b4643d2d50c0f845bee3/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:print:28.0.0] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/e31a38aa70cf7c96b8fbff5833b7cada/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/65c0aae8a35b4100a6d25b0593a45ad2/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:interpolator:28.0.0] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/a70bf020bd9c8cc5c7e1e0c2623f0445/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/b51cb899f1cb6eeb5765ad21bce5cff4/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/e75ad23223111e28318aed4ed0dd28ca/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/11a25b81d4226ae7e2d9cadb76689a1f/AndroidManifest.xml:17:1-22:12
+INJECTED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:2:1-109:12
+INJECTED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:2:1-109:12
+INJECTED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:2:1-109:12
+	package
+		ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:4:5-30
+		INJECTED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml
+		INJECTED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml
+		ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:2:1-109:12
+		INJECTED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml
+	xmlns:tools
+		ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:3:5-51
+	android:versionCode
+		INJECTED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml
+		ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:2:1-109:12
+		INJECTED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:2:11-69
+	android:installLocation
+		ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:5:5-45
+supports-screens
+ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:7:5-12:40
+	android:largeScreens
+		ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:9:9-36
+	android:smallScreens
+		ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:11:9-36
+	android:normalScreens
+		ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:10:9-37
+	android:xlargeScreens
+		ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:12:9-37
+	android:anyDensity
+		ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:8:9-34
+uses-feature#0x00020000
+ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:14:5-54
+	android:glEsVersion
+		ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:14:19-51
+uses-feature#android.hardware.vulkan
+ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:15:5-17:36
+	android:required
+		ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:17:9-33
+	android:name
+		ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:16:9-47
+uses-feature#android.hardware.bluetooth_le
+ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:19:5-21:35
+	android:required
+		ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:21:9-32
+	android:name
+		ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:20:9-53
+uses-permission#android.permission.BLUETOOTH
+ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:23:5-68
+MERGED from [:plugin-debug:] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/3f8987ffe89ab4b565e11618a63d2524/AndroidManifest.xml:11:5-68
+MERGED from [:plugin-debug:] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/3f8987ffe89ab4b565e11618a63d2524/AndroidManifest.xml:11:5-68
+	android:name
+		ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:23:22-65
+uses-permission#android.permission.BLUETOOTH_ADMIN
+ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:24:5-74
+	android:name
+		ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:24:22-71
+uses-permission#android.permission.INTERNET
+ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:25:5-67
+	android:name
+		ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:25:22-64
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:26:5-81
+	android:name
+		ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:26:22-78
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:27:5-79
+	android:name
+		ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:27:22-76
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:28:5-79
+	android:name
+		ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:28:22-76
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:29:5-76
+	android:name
+		ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:29:22-73
+uses-permission#android.permission.ACCESS_GPS
+ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:30:5-69
+	android:name
+		ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:30:22-66
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:31:5-81
+	android:name
+		ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:31:22-78
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:32:5-80
+	android:name
+		ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:32:22-77
+uses-feature#android.hardware.touchscreen
+ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:34:5-36:36
+	android:required
+		ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:36:9-33
+	android:name
+		ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:35:9-52
+uses-feature#android.hardware.touchscreen.multitouch
+ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:37:5-39:36
+	android:required
+		ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:39:9-33
+	android:name
+		ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:38:9-63
+uses-feature#android.hardware.touchscreen.multitouch.distinct
+ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:40:5-42:36
+	android:required
+		ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:42:9-33
+	android:name
+		ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:41:9-72
+application
+ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:44:5-107:19
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/3183b892f608d85e0fac75ce4800d9fb/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/3183b892f608d85e0fac75ce4800d9fb/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:support-compat:28.0.0] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/1a2f1a7b56abf3ead7d2a10f54ce405c/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:support-compat:28.0.0] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/1a2f1a7b56abf3ead7d2a10f54ce405c/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/79dc2d1bd89eb4545d5211224b24dff2/AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/79dc2d1bd89eb4545d5211224b24dff2/AndroidManifest.xml:22:5-23:19
+	android:screenOrientation
+		ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:48:9-45
+	android:appComponentFactory
+		ADDED from [com.android.support:support-compat:28.0.0] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/1a2f1a7b56abf3ead7d2a10f54ce405c/AndroidManifest.xml:22:18-91
+	android:label
+		ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:46:9-41
+	android:icon
+		ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:45:9-40
+	android:theme
+		ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:47:9-50
+activity#com.TR_co.Final.HospitalActivity
+ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:50:9-52:75
+	android:theme
+		ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:52:13-63
+	android:name
+		ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:51:13-45
+activity#com.TR_co.Final.DeviceScanActivity
+ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:53:9-56:72
+	android:label
+		ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:55:13-45
+	android:theme
+		ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:56:13-60
+	android:name
+		ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:54:13-47
+activity#com.TR_co.Final.Splash_BtDevice_Connect_Activity
+ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:57:9-59:66
+	android:theme
+		ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:59:13-63
+	android:name
+		ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:58:13-61
+activity#com.TR_co.Final.Splash_Permission_Activity
+ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:60:9-68:20
+	android:theme
+		ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:62:13-63
+	android:name
+		ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:61:13-55
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:63:13-67:29
+action#android.intent.action.MAIN
+ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:64:17-69
+	android:name
+		ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:64:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:66:17-77
+	android:name
+		ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:66:27-74
+activity#com.TR_co.Final.AddressActivity
+ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:69:9-71:66
+	android:theme
+		ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:71:13-63
+	android:name
+		ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:70:13-44
+activity#com.TR_co.Final.HistoryActivity
+ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:72:9-74:66
+	android:theme
+		ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:74:13-63
+	android:name
+		ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:73:13-44
+activity#com.TR_co.Final.UnityPlayerActivity
+ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:75:9-89:20
+	android:screenOrientation
+		ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:81:13-49
+	android:label
+		ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:79:13-45
+	android:launchMode
+		ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:80:13-44
+	android:hardwareAccelerated
+		ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:78:13-48
+	android:configChanges
+		ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:77:13-194
+	android:theme
+		ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:82:13-63
+	android:name
+		ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:76:13-48
+meta-data#unityplayer.UnityActivity
+ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:83:13-85:40
+	android:value
+		ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:85:17-37
+	android:name
+		ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:84:17-57
+meta-data#android.notch_support
+ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:86:13-88:40
+	android:value
+		ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:88:17-37
+	android:name
+		ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:87:17-53
+meta-data#unity.build-id
+ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:91:9-93:68
+	android:value
+		ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:93:13-65
+	android:name
+		ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:92:13-42
+meta-data#unity.splash-mode
+ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:94:9-96:33
+	android:value
+		ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:96:13-30
+	android:name
+		ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:95:13-45
+meta-data#unity.splash-enable
+ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:97:9-99:36
+	android:value
+		ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:99:13-33
+	android:name
+		ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:98:13-47
+meta-data#notch.config
+ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:100:9-102:50
+	android:value
+		ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:102:13-47
+	android:name
+		ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:101:13-40
+service#com.TR_co.Final.bt_module.BluetoothLeService
+ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:104:9-106:38
+	android:enabled
+		ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:106:13-35
+	android:name
+		ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml:105:13-57
+uses-sdk
+INJECTED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml
+INJECTED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml
+MERGED from [:plugin-debug:] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/3f8987ffe89ab4b565e11618a63d2524/AndroidManifest.xml:7:5-9:41
+MERGED from [:plugin-debug:] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/3f8987ffe89ab4b565e11618a63d2524/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/ccc0cf7f22bbae1b31f4444e2e5ef5f5/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/ccc0cf7f22bbae1b31f4444e2e5ef5f5/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/3183b892f608d85e0fac75ce4800d9fb/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/3183b892f608d85e0fac75ce4800d9fb/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/b412787baefa49cc6729f7b125045b62/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/b412787baefa49cc6729f7b125045b62/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/b6aaa6038eda2eb367cf2f911078c49a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/b6aaa6038eda2eb367cf2f911078c49a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/56a5f87eb5fbebd30e8947f4d6e8a613/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/56a5f87eb5fbebd30e8947f4d6e8a613/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/8856e39748ab577e3771456b13bdb017/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/8856e39748ab577e3771456b13bdb017/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/7a60a0c6067cf0be207fea0c4a032d79/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/7a60a0c6067cf0be207fea0c4a032d79/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/7b944d35e17e12892994751f1df09052/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/7b944d35e17e12892994751f1df09052/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/fcf33a1dea3afac21483d25ff5a00cb0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/fcf33a1dea3afac21483d25ff5a00cb0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/0e76c4ff2df737e33eaadfaa0ffd0e8e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/0e76c4ff2df737e33eaadfaa0ffd0e8e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/58bd0d975b584078afe4cb69fff80e78/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/58bd0d975b584078afe4cb69fff80e78/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/9bf0ada3089c3551d346037e677cc69f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/9bf0ada3089c3551d346037e677cc69f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/2e82989457728e858f46cbeb4b964161/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/2e82989457728e858f46cbeb4b964161/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/bd46fb0c5cc09ef08f99e43d502d0431/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/bd46fb0c5cc09ef08f99e43d502d0431/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/a586ae75f41293d8fa4ad9f292193cce/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/a586ae75f41293d8fa4ad9f292193cce/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/8da99c758c9acbcec4ea09b8799fc456/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/8da99c758c9acbcec4ea09b8799fc456/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/1a2f1a7b56abf3ead7d2a10f54ce405c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/1a2f1a7b56abf3ead7d2a10f54ce405c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/79dc2d1bd89eb4545d5211224b24dff2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/79dc2d1bd89eb4545d5211224b24dff2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/96ec3525d54dba123ebed2e3e351e9d1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/96ec3525d54dba123ebed2e3e351e9d1/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/c3fe535905d0c74703a218514c17a3ca/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/c3fe535905d0c74703a218514c17a3ca/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/ea983c296979a56b2cdbc04b001ccaa0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/ea983c296979a56b2cdbc04b001ccaa0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/3feb910cd0e1b4643d2d50c0f845bee3/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/3feb910cd0e1b4643d2d50c0f845bee3/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/e31a38aa70cf7c96b8fbff5833b7cada/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/e31a38aa70cf7c96b8fbff5833b7cada/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/65c0aae8a35b4100a6d25b0593a45ad2/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/65c0aae8a35b4100a6d25b0593a45ad2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/a70bf020bd9c8cc5c7e1e0c2623f0445/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/a70bf020bd9c8cc5c7e1e0c2623f0445/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/b51cb899f1cb6eeb5765ad21bce5cff4/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/b51cb899f1cb6eeb5765ad21bce5cff4/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/e75ad23223111e28318aed4ed0dd28ca/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/e75ad23223111e28318aed4ed0dd28ca/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/11a25b81d4226ae7e2d9cadb76689a1f/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /Users/dongyounkim/.gradle/caches/transforms-2/files-2.1/11a25b81d4226ae7e2d9cadb76689a1f/AndroidManifest.xml:20:5-44
+INJECTED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml
+INJECTED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml
+		ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml
+		INJECTED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml
+		ADDED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml
+		INJECTED from /Users/dongyounkim/Documents/TRcoProject2/final/unitybuild_app/2019-12-01_02/finalpj/src/main/AndroidManifest.xml

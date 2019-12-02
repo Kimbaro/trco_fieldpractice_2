@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"/>
+    <title>Title</title>
+    <script src="/public/util/readParam.js"></script>
+    <script type="text/javascript"
+            src="//dapi.kakao.com/v2/maps/sdk.js?appkey=11faaf4ae3e6afd1ce12680c45397f93"></script>
+    <script type="text/javascript"
+            src="//dapi.kakao.com/v2/maps/sdk.js?appkey=11faaf4ae3e6afd1ce12680c45397f93&libraries=services,clusterer"></script>
+    <style>
+        html, body {
+            margin: 0px;
+            padding: 0px;
+            width: 100%;
+            height: 100%;
+        }
+
+        #map {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .customoverlay {
+            position: relative;
+            bottom: 85px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            border-bottom: 2px solid #ddd;
+            float: left;
+        }
+
+        .customoverlay:nth-of-type(n) {
+            border: 0;
+            box-shadow: 0px 1px 2px #888;
+        }
+
+        .customoverlay_a_1 {
+            display: block;
+            text-decoration: none;
+            color: #000;
+            text-align: center;
+            border-radius: 6px;
+            border-top: 1px solid #ccc;
+            border-right: 1px solid #ccc;
+            font-size: 14px;
+            font-weight: bold;
+            overflow: hidden;
+            background: #d95050;
+            background: #d95050 url(http://t1.daumcdn.net/localimg/localimages/07/mapapidoc/arrow_white.png) no-repeat right 14px center;
+        }
+
+        .customoverlay_a_2 {
+            display: block;
+            text-decoration: none;
+            color: #000;
+            text-align: center;
+            border-radius: 6px;
+            border-top: 1px solid #ccc;
+            border-right: 1px solid #ccc;
+            font-size: 14px;
+            font-weight: bold;
+            overflow: hidden;
+            background: #2C93FF;
+            background: #2C93FF url(http://t1.daumcdn.net/localimg/localimages/07/mapapidoc/arrow_white.png) no-repeat right 14px center;
+        }
+
+        .customoverlay .title {
+            display: block;
+            text-align: center;
+            background: #fff;
+            margin-right: 35px;
+            padding: 10px 15px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .customoverlay:after {
+            content: '';
+            position: absolute;
+            margin-left: -12px;
+            left: 50%;
+            bottom: -12px;
+            width: 22px;
+            height: 12px;
+            background: url('http://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png')
+        }
+
+        #roadviewControl_1 {
+            position: absolute;
+            top: 5px;
+            width: 150px;
+            height: 40px;
+            z-index: 1;
+            cursor: pointer;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        #roadviewControl_1 .title {
+            display: block;
+            text-align: center;
+            background: #fff;
+            margin-right: 35px;
+            padding: 10px 15px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        #roadviewControl_1 a {
+            display: block;
+            text-decoration: none;
+            color: #000;
+            text-align: center;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: bold;
+            overflow: hidden;
+            background: #d95050;
+            background: #d95050 url(http://t1.daumcdn.net/localimg/localimages/07/mapapidoc/arrow_white.png) no-repeat right 14px center;
+        }
+
+        #roadviewControl_2 {
+            position: absolute;
+            top: 45px;
+            width: 150px;
+            height: 40px;
+            z-index: 1;
+            cursor: pointer;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        #roadviewControl_2 .title {
+            display: block;
+            text-align: center;
+            background: #fff;
+            margin-right: 35px;
+            padding: 10px 15px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        #roadviewControl_2 a {
+            display: block;
+            text-decoration: none;
+            color: #000;
+            text-align: center;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: bold;
+            overflow: hidden;
+            background: #2C93FF;
+            background: #2C93FF url(http://t1.daumcdn.net/localimg/localimages/07/mapapidoc/arrow_white.png) no-repeat right 14px center;
+        }
+
+        #roadviewControl_3 {
+            position: absolute;
+            top: 85px;
+            width: 150px;
+            height: 40px;
+            z-index: 1;
+            cursor: pointer;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        #roadviewControl_3 .title {
+            display: block;
+            text-align: center;
+            background: #fff;
+            margin-right: 35px;
+            padding: 10px 15px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        #roadviewControl_3 a {
+            display: block;
+            text-decoration: none;
+            color: #000;
+            text-align: center;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: bold;
+            overflow: hidden;
+            background: #6E6E6E;
+            background: #6E6E6E url(http://t1.daumcdn.net/localimg/localimages/07/mapapidoc/arrow_white.png) no-repeat right 14px center;
+        }
+
+        #roadviewControl_3 .title:active {
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+<div id="map"></div> <!-- 지도를 표시할 div 입니다 -->
+<div id="roadviewControl_1" onclick="marker_input(0)">
+    <a>
+        <span class="title" id="roadviewControl_1_title">병원위치</span>
+    </a>
+</div>
+<div id="roadviewControl_2" onclick="marker_input(1)">
+    <a>
+        <span class="title" id="roadviewControl_2_title">의원위치</span>
+    </a>
+</div>
+
+<div id="roadviewControl_3" onclick="setCenter()">
+    <a>
+        <span class="title" id="roadviewControl_3_title">시작위치</span>
+    </a>
+</div>
+<script>
+    var url = "http://192.168.0.3:8080/hospital_search";
+
+    var area = getParameterByName("area");
+    var lat = getParameterByName("latitude");
+    var lon = getParameterByName("longitude");
+    var dist = getParameterByName("distance");
+    var center = new kakao.maps.LatLng(lat, lon);
+
+    var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
+    var options = { //지도를 생성할 때 필요한 기본 옵션
+        center: new kakao.maps.LatLng(lat, lon),
+        level: 5 //지도의 레벨(확대, 축소 정도)
+    };
+
+
+    var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
+
+    // 지도를 표시하는 div 크기를 변경하는 함수입니다
+    function resizeMap() {
+        var mapContainer = document.getElementById('map');
+        mapContainer.style.width = '100%';
+        mapContainer.style.height = '100%';
+    }
+
+    function relayout() {
+
+        // 지도를 표시하는 div 크기를 변경한 이후 지도가 정상적으로 표출되지 않을 수도 있습니다
+        // 크기를 변경한 이후에는 반드시  map.relayout 함수를 호출해야 합니다
+        // window의 resize 이벤트에 의한 크기변경은 map.relayout 함수가 자동으로 호출됩니다
+        map.relayout();
+    }
+
+    // resizeMap();
+    // relayout();
+
+    // 마커가 표시될 위치입니다
+    var markerPosition = new kakao.maps.LatLng(lat, lon);
+
+    // 마커를 생성합니다
+    var marker = new kakao.maps.Marker({
+        position: markerPosition
+    });
+    // 마커가 지도 위에 표시되도록 설정합니다
+    marker.setMap(map);
+
+    // 지도에 표시할 원을 생성합니다
+    var circle = new kakao.maps.Circle({
+        center: new kakao.maps.LatLng(lat, lon),  // 원의 중심좌표 입니다
+        radius: 10000, // 미터 단위의 원의 반지름입니다
+        strokeWeight: 5, // 선의 두께입니다
+        strokeOpacity: 0, // 선의 불투명도 입니다 1에서 0 사이의 값이며 0에 가까울수록 투명합니다
+        strokeStyle: 'dashed', // 선의 스타일 입니다
+        fillColor: '#81F781', // 채우기 색깔입니다
+        fillOpacity: 0.2  // 채우기 불투명도 입니다
+    });
+    // 지도에 원을 표시합니다
+    circle.setMap(map);
+
+    function setCenter() {
+
+        var moveLatLon = new kakao.maps.LatLng(lat, lon);
+
+        // 지도 중심을 이동 시킵니다
+        map.panTo(moveLatLon);
+    }
+
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function () { // 요청에 대한 콜백
+        if (xhr.readyState === xhr.DONE) { // 요청이 완료되면
+            if (xhr.status === 200 || xhr.status === 201) {
+                // console.log(xhr.responseText);
+                marker_set(xhr.responseText);
+            } else {
+                console.error(xhr.responseText);
+
+            }
+        }
+    };
+    var request_url = url + '?area=' + area + '&latitude=' + lat + '&longitude=' + lon + '&distance=' + dist;
+    xhr.open('POST', request_url); // 메소드와 주소 설정
+    xhr.send(); // 요청 전송
+
+    var data;
+
+    function marker_set(json_array) {
+        data = JSON.parse(json_array);
+    }
+
+    // 지도에 표시된 마커 객체를 가지고 있을 배열입니다
+    var markers = [];
+    var markers_overlay = [];
+
+    // 마커를 생성하고 지도위에 표시하는 함수입니다
+    function addMarker(position, image, type) {
+
+        // 마커를 생성합니다
+        var marker = new kakao.maps.Marker({
+            position: position,
+            image: image
+        });
+
+        // 마커가 지도 위에 표시되도록 설정합니다
+        marker.setMap(map);
+        var url = 'https://map.kakao.com/link/to/' + data[i].name + ',' + data[i].latitude + ',' + data[i].longitude;
+        console.log(url);
+        var content;
+        if (type == 0) {
+            content = '<div class="customoverlay">' +
+                '  <a class="customoverlay_a_1" href="' + url + '">' +
+                '    <span class="title">' + data[i].name + '<br>' + data[i].tell + '</span>' +
+                '  </a>' +
+                '</div>'
+        } else if (type == 1) {
+            content = '<div class="customoverlay">' +
+                '  <a class="customoverlay_a_2" href="' + url + '">' +
+                '    <span class="title">' + data[i].name + '<br>' + data[i].tell + '</span>' +
+                '  </a>' +
+                '</div>'
+        }
+
+        // 커스텀 오버레이를 생성합니다
+        var customOverlay = new kakao.maps.CustomOverlay({
+            map: map,
+            position: position,
+            content: content,
+            yAnchor: 1
+        });
+
+        // 생성된 마커를 배열에 추가합니다
+        markers.push(marker);
+        markers_overlay.push(customOverlay);
+    }
+
+    // "마커 감추기" 버튼을 클릭하면 호출되어 배열에 추가된 마커를 지도에서 삭제하는 함수입니다
+    function hideMarkers() {
+        for (var i = 0; i < markers.length; i++) {
+            markers[i].setMap(null);
+            markers_overlay[i].setMap(null);
+        }
+    }
+
+
+    function marker_input(type) {
+        hideMarkers();
+        if (type == 0) {
+            division_button_click_event(0);
+            for (i in data) {
+                if (data[i].division == "의원") {
+                    continue;
+                }
+                var imageSrc = '/public/img/hospital.png', // 마커이미지의 주소입니다
+                    imageSize = new kakao.maps.Size(40, 40), // 마커이미지의 크기입니다
+                    imageOption = {offset: new kakao.maps.Point(21, 69)}; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
+
+                addMarker(new kakao.maps.LatLng(data[i].latitude, data[i].longitude), new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption), 0);
+            }
+        } else if (type == 1) {
+            division_button_click_event(1);
+            for (i in data) {
+                if (data[i].division == "병원") {
+                    continue;
+                }
+                var imageSrc = '/public/img/pharmacy.png', // 마커이미지의 주소입니다
+                    imageSize = new kakao.maps.Size(40, 40), // 마커이미지의 크기입니다
+                    imageOption = {offset: new kakao.maps.Point(21, 69)}; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
+
+                addMarker(new kakao.maps.LatLng(data[i].latitude, data[i].longitude), new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption), 1);
+            }
+        }
+    }
+
+    function division_button_click_event(type) {
+        if (type == 0) {
+            document.getElementById("roadviewControl_1_title").style.backgroundColor = '#BDBDBD';
+            document.getElementById("roadviewControl_1").style.width = '200px';
+            document.getElementById("roadviewControl_2_title").style.backgroundColor = '#FFFFFF';
+            document.getElementById("roadviewControl_2").style.width = '150px';
+
+        } else if (type == 1) {
+            document.getElementById("roadviewControl_1_title").style.backgroundColor = '#FFFFFF';
+            document.getElementById("roadviewControl_1").style.width = '150px';
+            document.getElementById("roadviewControl_2_title").style.backgroundColor = '#BDBDBD';
+            document.getElementById("roadviewControl_2").style.width = '200px';
+        }
+    }
+
+
+</script>
+</body>
+</html>

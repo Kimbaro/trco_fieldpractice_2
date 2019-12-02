@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../util/GeoLocation.js"></script>
+    <script src="../util/readParam.js"></script>
+</head>
+<body>
+<script>
+    var area = getParameterByName("area");
+    var lat = getParameterByName("latitude");
+    var lon = getParameterByName("longitude");
+    var dist = getParameterByName("distance");
+    var ip = getParameterByName("ip");
+    var url = ip+"/hospital_map";
+
+    getLocation(url,area, lat, lon, dist);
+
+</script>
+</body>
+</html>

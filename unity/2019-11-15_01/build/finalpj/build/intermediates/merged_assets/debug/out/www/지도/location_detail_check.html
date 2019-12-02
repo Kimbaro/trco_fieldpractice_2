@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../util/GeoLocation.js"></script>
+    <script src="../util/readParam.js"></script>
+</head>
+<body>
+<script>
+    var url = "http://192.168.0.3:8080/hospital_map";
+    var area = getParameterByName("area");
+    var lat = getParameterByName("latitude");
+    var lon = getParameterByName("longitude");
+    var dist = getParameterByName("distance");
+
+    getLocation(url,area, lat, lon, dist);
+</script>
+</body>
+</html>

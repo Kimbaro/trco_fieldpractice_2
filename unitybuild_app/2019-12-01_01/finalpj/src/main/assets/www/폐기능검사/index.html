@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+          name="viewport"/>
+
+    <title>Title</title>
+    <script src="js/readParam.js"></script>
+    <script src="../util/dateFormat.js"></script>
+    <script src="js/updateParam.js"></script>
+    <script src="js/Chart.min.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/lungs_cal.js"></script>
+    <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-annotation/0.5.7/chartjs-plugin-annotation.min.js"></script>
+    <!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>-->
+    <!--    <script src="https://unpkg.com/bootstrap-table/dist/bootstrap-table.js"></script>-->
+
+
+    <style type="text/css">
+        body {
+            font-size: 14px;
+        }
+
+        #container > div {
+            position: relative;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            display: -webkit-flex;
+            /*-webkit-align-item: center;*/
+            /*-webkit-justify-content: center;*/
+        }
+
+        td {
+            padding: 5px;
+            font-size: 14px;
+        }
+
+        span.title {
+            margin: 4% 0 0 0;
+            font-size: 20px;
+            font-weight: bold;
+            border-left: 3px solid red;
+            padding-left: 5px;
+            border-bottom: solid gray;
+            float: left;
+            width: 100%;
+        }
+
+        #fixed_button {
+            position: fixed;
+            width: 43px;
+            right: 5%;
+            top: 2%;
+            z-index: 1;
+        }
+
+        .detail_button {
+            font-size: 14px;
+        }
+
+
+
+    </style>
+</head>
+<body style="margin: 0 5% 0 5%" id="container">
+<img src="../img/list.png" id="fixed_button" onclick="history.back()">
+<span class="title">진단자정보</span>
+<div style="float: left; background-color: #F9F9F9; margin: 0 0 4% 0; width: 100%">
+    <table border="0">
+        <tr>
+            <td colspan="3">이름 : <span id="name">홍길동</span></td>
+        </tr>
+        <tr>
+            <td colspan="3">목록번호 : <span id="number"> - </span></td>
+        </tr>
+        <tr>
+            <td>성별 : <span id="sex">남</span></td>
+            <td><span id="age">만00세</span></td>
+        </tr>
+        <tr>
+            <td>키 : <span id="height">180</span></td>
+            <td>몸무게 : <span id="weight">50</span></td>
+        </tr>
+        <tr>
+            <td colspan="3">날짜 : <span id="date">0000-00-00 00:00:00</span></td>
+        </tr>
+    </table>
+</div>
+
+<span class="title">결과차트</span>
+<div style="float: left; width: 100%; background-color: #F9F9F9; margin-bottom: 5%;">
+    <table border="0">
+        <!--        <tr>-->
+        <!--            <td>진단결과 <span id="result_avg" style="font-size: 20px; font-weight: bold">null</span> 수치를 나타내며,</td>-->
+        <!--        </tr>-->
+        <!--        <tr>-->
+        <!--            <td>고객님은 <span id="result" style="font-size: 20px; font-weight: bold">null</span>입니다.</td>-->
+        <!--        </tr>-->
+        <tr>
+            <td>진단결과 <a id="td_name1" style="font-weight: bold"></a>님은<br><a id="td_comment1"></a>
+            </td>
+        </tr>
+        <tr>
+            <td><a id="td_name2" style="font-weight: bold"></a>님은<a id="td_comment2"></a></td>
+        </tr>
+    </table>
+</div>
+<br>
+<div style="width:100%;">
+    <canvas style="margin-top: 3%; margin-right: 8%" id="canvas"></canvas>
+    <span style="position: absolute; z-index: 0; top: 0px; left: 6%; font-size: 10px;">FEV1%</span>
+    <span style="position: absolute; z-index: 0; bottom: 18%; right: 0px; font-size: 10px;">FVC</span>
+</div>
+<div style="margin-bottom: 4%">
+    <script>
+        // ?x=110&y=98
+        var data = getParameterByName("id");
+        var json_data = JSON.parse(decodeURIComponent(data));
+        var time = new Date(json_data.time);
+
+        var info = getParameterByName("info");
+        var json_info = JSON.parse(decodeURIComponent(info));
+
+        document.getElementById("name").innerText = json_info.name;
+        document.getElementById("number").innerText = getParameterByName("number");
+        document.getElementById("sex").innerText = json_info.sex;
+        document.getElementById("age").innerText = json_info.birth + "(만" + json_info.age + "세)";
+        document.getElementById("height").innerText = json_info.height;
+        document.getElementById("weight").innerText = json_info.weight;
+        document.getElementById("date").innerText = date_to_str(time) + "초";
+
+
+        //alert(document.getElementById("name").value);
+        //alert(document.getElementById("name").innerText);
+
+        //  var data = [getParameterByName("x"), getParameterByName("y")];
+        lungs_cal(json_data.fvc_pred_avg, json_data.fevfvc_pred_avg, document.getElementById("td_name1"), document.getElementById("td_name2"), document.getElementById("td_comment1"), document.getElementById("td_comment2"), json_info.name);
+        var config = {
+            datasets: [{
+                // 그래프 범위설정값
+                label: '측정값2',
+                xAxisID: 'x-axis-1',
+                yAxisID: 'y-axis-1',
+                pointRadius: 0,
+                data: [{
+                    x: 0,
+                    y: 0
+                }, {
+                    x: 100,
+                    y: 100
+                }]
+            }, {
+                // 그래프 범위설정값
+                label: '측정값',
+                xAxisID: 'x-axis-1',
+                yAxisID: 'y-axis-1',
+                pointRadius: 10,
+                pointHoverRadius: 10,
+                borderColor: 'rgb(0, 0, 0)',
+                backgroundColor: 'rgb(0, 0, 0)',
+                data: [{
+                    x: json_data.fvc_pred_avg,
+                    y: json_data.fevfvc_pred_avg
+                }]
+            }]
+        };
+
+        window.onload = function () {
+            var ctx = document.getElementById('canvas').getContext('2d');
+            window.myLine = Chart.Scatter(ctx, {
+                data: config, options: {
+                    title: {
+                        display: false,
+                        text: '폐질환 자가진단 결과표',
+                        fontSize: 40,
+                        id: "test"
+                    },
+                    hover: {
+                        mode: 'nearest',
+                        intersect: true
+                    },
+                    // 라벨설정여부
+                    legend: {display: false},
+                    scales: {
+                        xAxes: [{
+                            ticks: {
+                                fontSize: 12
+                            }
+                        }], yAxes: [{
+                            ticks: {
+                                fontSize: 12
+                            }
+                        }]
+                    }, annotation: {
+
+                        drawTime: 'afterDatasetsDraw',
+                        events: ['dblclick'],
+                        annotations: [{
+                            id: 'warning1',
+                            type: 'box',
+                            xScaleID: 'x-axis-1',
+                            yScaleID: 'y-axis-1',
+                            xMin: 0,
+                            xMax: 80,
+                            yMin: 0,
+                            yMax: 70,
+                            backgroundColor: 'rgba(255, 167, 167, 0.5)',
+                            //borderColor: 'rgb(255, 0, 0)',
+                            borderWidth: 1,
+                        }, {
+                            id: 'warning2',
+                            type: 'box',
+                            xScaleID: 'x-axis-1',
+                            yScaleID: 'y-axis-1',
+                            xMin: 80,
+                            xMax: 200,
+                            yMin: 0,
+                            yMax: 70,
+                            backgroundColor: 'rgba(255, 224, 140, 0.5)',
+                            //borderColor: 'rgb(255, 0, 0)',
+                            borderWidth: 1,
+                        }, {
+                            id: 'warning3',
+                            type: 'box',
+                            xScaleID: 'x-axis-1',
+                            yScaleID: 'y-axis-1',
+                            xMin: 0,
+                            xMax: 80,
+                            yMin: 70,
+                            yMax: 200,
+                            backgroundColor: 'rgba(255, 224, 140, 0.5)',
+                            //borderColor: 'rgb(255, 0, 0)',
+                            borderWidth: 1,
+                        }, {
+                            id: 'warning4',
+                            type: 'box',
+                            xScaleID: 'x-axis-1',
+                            yScaleID: 'y-axis-1',
+                            xMin: 80,
+                            xMax: 200,
+                            yMin: 70,
+                            yMax: 200,
+                            backgroundColor: 'rgba(206, 242, 121, 0.5)',
+                            //borderColor: 'rgb(255, 0, 0)',
+                            borderWidth: 1,
+                        }
+                        ],
+                    }
+                }
+            })
+            ;
+        };
+
+
+
+    </script>
+    <button id="detail_button">자세히..</button>
+</div>
+<div id="detail_box" style="display: none">
+    <span class="title">상세보기</span>
+    <div style="float: left; width: 100%; background-color: #F9F9F9; margin-bottom: 5%" id="detail">
+        <table border="0" width="100%">
+            <tr>
+                <td colspan="5">평균값 : <span id="base">Morris 아시아인 퀀저식</span></td>
+            </tr>
+            <th>
+            <td>ITEM</td>
+            <td>--</td>
+            <td>MEAS</td>
+            <td>PRED</td>
+            <td>%PRED</td>
+            </th>
+            <tr>
+                <td colspan="2">FVC</td>
+                <td><span>L</span></td>
+                <td><span id="fvc_meas">0.0</span></td>
+                <td><span id="fvc_pred">0.0</span></td>
+                <td><span id="fvc_pred_avg">0.0</span></td>
+            </tr>
+            <tr>
+                <td colspan="2">FEV1.0</td>
+                <td><span>L</span></td>
+                <td><span id="fev_meas">0.0</span></td>
+                <td><span id="fev_pred">0.0</span></td>
+                <td><span id="fev_pred_avg">0.0</span></td>
+            </tr>
+            <tr>
+                <td colspan="2">FEV1/FVC</td>
+                <td><span>%</span></td>
+                <td><span id="fevfvc_meas">0.0</span></td>
+                <td><span id="fevfvc_pred">0.0</span></td>
+                <td><span id="fevfvc_pred_avg">0.0</span></td>
+            </tr>
+            <tr>
+                <td colspan="2">FEF25</td>
+                <td><span>L/s</span></td>
+                <td><span id="fef25_meas">0.0</span></td>
+                <td><span id="fef25_pred">0.0</span></td>
+                <td><span id="fef25_pred_avg">0.0</span></td>
+            </tr>
+            <tr>
+                <td colspan="2">FEF50</td>
+                <td><span>L/s</span></td>
+                <td><span id="fef50_meas">0.0</span></td>
+                <td><span id="fef50_pred">0.0</span></td>
+                <td><span id="fef50_pred_avg">0.0</span></td>
+            </tr>
+            <tr>
+                <td colspan="2">FEF75</td>
+                <td><span>L/s</span></td>
+                <td><span id="fef75_meas">0.0</span></td>
+                <td><span id="fef75_pred">0.0</span></td>
+                <td><span id="fef75_pred_avg">0.0</span></td>
+            </tr>
+        </table>
+    </div>
+</div>
+<script>
+    var detail_button = document.getElementById("detail_button");
+    detail_button.onclick = function () {
+        var box = document.getElementById("detail_box");
+        if (box.style.display == 'none') {
+            box.style.display = 'block';
+            box.scrollIntoView();
+            detail_button.innerText = "접기";
+        } else {
+            box.style.display = 'none';
+            detail_button.innerText = "자세히..";
+        }
+    }
+
+    document.getElementById("fvc_meas").innerText = json_data.fvc_meas;
+    document.getElementById("fvc_pred").innerText = json_data.fvc_pred;
+    document.getElementById("fvc_pred_avg").innerText = json_data.fvc_pred_avg;
+
+    document.getElementById("fev_meas").innerText = json_data.fev_meas;
+    document.getElementById("fev_pred").innerText = json_data.fev_pred;
+    document.getElementById("fev_pred_avg").innerText = json_data.fev_pred_avg;
+
+    document.getElementById("fevfvc_meas").innerText = json_data.fevfvc_meas;
+    document.getElementById("fevfvc_pred").innerText = json_data.fevfvc_pred;
+    document.getElementById("fevfvc_pred_avg").innerText = json_data.fevfvc_pred_avg;
+
+    document.getElementById("fevfvc_pred").innerText = json_data.fevfvc_pred;
+    document.getElementById("fevfvc_pred").innerText = json_data.fevfvc_pred;
+    document.getElementById("fevfvc_pred").innerText = json_data.fevfvc_pred;
+
+    document.getElementById("fef25_meas").innerText = json_data.fef25_meas;
+    document.getElementById("fef25_pred").innerText = '-';
+    document.getElementById("fef25_pred_avg").innerText = '-';
+
+    document.getElementById("fef50_meas").innerText = json_data.fef50_meas;
+    document.getElementById("fef50_pred").innerText = '-';
+    document.getElementById("fef50_pred_avg").innerText = '-';
+
+    document.getElementById("fef75_meas").innerText = json_data.fef75_meas;
+    document.getElementById("fef75_pred").innerText = '-';
+    document.getElementById("fef75_pred_avg").innerText = '-';
+
+
+
+</script>
+<!--<script>-->
+<!--    setParam(getParameterByName("name"), document.getElementById("name"));-->
+<!--    setParam(getParameterByName("number"), document.getElementById("number"));-->
+<!--    setParam(getParameterByName("date"), document.getElementById("date"));-->
+<!--    setParam(getParameterByName("sex"), document.getElementById("sex"));-->
+<!--    setParam(getParameterByName("age"), document.getElementById("age"));-->
+<!--    setParam(getParameterByName("height"), document.getElementById("height"));-->
+<!--    setParam(getParameterByName("weight"), document.getElementById("weight"));-->
+
+<!--    setParam(getParameterByName("fvc_meas"), document.getElementById("fvc_meas"));-->
+<!--    setParam(getParameterByName("fvc_pred"), document.getElementById("fvc_pred"));-->
+<!--    setParam(getParameterByName("fvc_pred_avg"), document.getElementById("fvc_pred_avg"));-->
+
+<!--    setParam(getParameterByName("fev_meas"), document.getElementById("fev_meas"));-->
+<!--    setParam(getParameterByName("fev_pred"), document.getElementById("fev_pred"));-->
+<!--    setParam(getParameterByName("fev_pred_avg"), document.getElementById("fev_pred_avg"));-->
+
+<!--    setParam(getParameterByName("fevfvc_meas"), document.getElementById("fevfvc_meas"));-->
+<!--    setParam(getParameterByName("fevfvc_pred"), document.getElementById("fevfvc_pred"));-->
+<!--    setParam(getParameterByName("fevfvc_pred_avg"), document.getElementById("fevfvc_pred_avg"));-->
+
+<!--    setParam(getParameterByName("fef25_meas"), document.getElementById("fef25_meas"));-->
+<!--    setParam(getParameterByName("fef25_pred"), document.getElementById("fef25_pred"));-->
+<!--    setParam(getParameterByName("fef25_pred_avg"), document.getElementById("fef25_pred_avg"));-->
+
+<!--    setParam(getParameterByName("fef50_meas"), document.getElementById("fef50_meas"));-->
+<!--    setParam(getParameterByName("fef50_pred"), document.getElementById("fef50_pred"));-->
+<!--    setParam(getParameterByName("fef50_pred_avg"), document.getElementById("fef50_pred_avg"));-->
+
+<!--    setParam(getParameterByName("fef75_meas"), document.getElementById("fef75_meas"));-->
+<!--    setParam(getParameterByName("fef75_pred"), document.getElementById("fef75_pred"));-->
+<!--    setParam(getParameterByName("fef75_pred_avg"), document.getElementById("fef75_pred_avg"));-->
+<!--</script>-->
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" charset="UTF-8"
+          content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+    <title>Title</title>
+    <script src="../util/readParam.js"></script>
+    <script src="../util/dateFormat.js"></script>
+    <link rel="stylesheet" href="../util/bootstrap-table.min.css">
+    <script src="../util/bootstrap-table-zh-CN.min.js"></script>
+    <script src="../util/bootstrap-table.min.js"></script>
+
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        table.type04 {
+            border-collapse: separate;
+            border-spacing: 1px;
+            border-bottom: 3px solid #EC4B4E;
+
+            text-align: center;
+            line-height: 1.0;
+            border-top: 1px solid #ccc;
+            width: 100%;
+        }
+
+        table.type04 thead {
+            border-right: 1px solid #ccc;
+            border-left: 1px solid #ccc;
+            background: #EAEAEA;
+        }
+
+        table.type04 thead th {
+            padding: 10px;
+            font-weight: bold;
+            font-size: medium;
+        }
+
+        table.type04 th {
+            font-weight: bold;
+            vertical-align: center;
+            color: #EC4B4E;
+            border-right: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+        }
+
+        table.type04 td {
+            width: 350px;
+            padding: 5px;
+            vertical-align: center;
+            border-bottom: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+<table class="type04">
+    <thead>
+    <tr>
+        <th width="5%">No.</th>
+        <th width="500px">날짜</th>
+        <th colspan="2" width="35%">항목</th>
+    </tr>
+    </thead>
+    <tbody id="tbody">
+    <!--    <tr>-->
+    <!--        <th scope="row">1</th>-->
+    <!--        <td>내용이 들어갑니다.</td>-->
+    <!--        <td>폐기능검사</td>-->
+    <!--    </tr>-->
+    <!--    <tr>-->
+    <!--        <th scope="row">2</th>-->
+    <!--        <td>내용이 들어갑니다.</td>-->
+    <!--        <td style="background-color: #B2CCFF">호흡근력검사</td>-->
+    <!--    </tr>-->
+    <!--    <tr>-->
+    <!--        <th scope="row">3</th>-->
+    <!--        <td>내용이 들어갑니다.</td>-->
+    <!--        <td>폐기능검사</td>-->
+    <!--    </tr>-->
+    </tbody>
+</table>
+
+<script>
+    // ?id=4b866f08234ae01d21d89604
+    var id = getParameterByName("id");
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function () { // 요청에 대한 콜백
+        if (xhr.readyState === xhr.DONE) { // 요청이 완료되면
+            if (xhr.status === 200 || xhr.status === 201) {
+                console.log(xhr.responseText);
+                var data = JSON.parse(xhr.responseText);
+                console.log(data);
+                for (var i = 0; i < data.length; i++) {
+                    //document.getElementById("json").innerHTML += data[i].name + ", " + data[i].heart + ", " + data[i].age + "<br>";
+                    callbackFunction(i, data[i].time, data[i].type, data[i]);
+                }
+            } else {
+                console.error(xhr.responseText);
+
+            }
+        }
+    };
+    var request_url = 'http://34.84.170.2:8080/find_history?id=' + id;
+    var url = '/폐기능검사/test.html';
+    xhr.open('GET', request_url); // 메소드와 주소 설정
+    xhr.send(); // 요청 전송
+    // xhr.abort(); // 전송된 요청 취소
+
+    var tbd = document.getElementById("tbody");
+
+    function callbackFunction(index, time, type, jsonData) {
+        var tr = document.createElement('tr');
+        var th = document.createElement('th');
+        th.style.fontSize = "16px";
+        th.appendChild(document.createTextNode(index + 1));
+
+        var td1 = document.createElement('td');
+        td1.style.fontSize = "30px";
+        td1.appendChild(document.createTextNode(date_to_str(new Date(time))));
+
+        var td2 = document.createElement('td');
+        td2.style.fontSize = "30px";
+        if (type == 0) {
+            td2.appendChild(document.createTextNode("폐기능"));
+        } else {
+            td2.appendChild(document.createTextNode("호흡근력"));
+        }
+        var td3 = document.createElement('td');
+        img = new Image();
+        img.src = "../img/search.png";
+        img.width = 20;
+        img.onclick = function () {
+            location.href = '../폐기능검사/index.html?id=' + encodeURIComponent(JSON.stringify(jsonData));
+            //location.replace('../폐기능검사/test.html?id=' +encodeURIComponent(JSON.stringify(jsonData)));
+        }
+        td3.appendChild(img);
+
+        tr.appendChild(th);
+        tr.appendChild(td1);
+        tr.appendChild(td2);
+        tr.appendChild(td3);
+
+        tbd.appendChild(tr);
+    }
+
+    console.log(getParameterByName("id"));
+</script>
+</body>
+</html>

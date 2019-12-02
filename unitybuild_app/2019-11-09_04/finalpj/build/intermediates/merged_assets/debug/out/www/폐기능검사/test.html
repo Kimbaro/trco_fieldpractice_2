@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../util/readParam.js"></script>
+    <script src="../util/dateFormat.js"></script>
+</head>
+<body>
+<script>
+
+
+    // var data = getParameterByName("id");
+    // console.log(decodeURIComponent(data));
+    // var json_data = JSON.parse(decodeURIComponent(data));
+    // console.log(json_data.id);
+    //
+    // var time = new Date(json_data.time);
+    // console.log(date_to_str(time));
+    //
+    // document.write(json_data+"");
+
+
+    var info = new Object();
+    info.name = "김";
+    info.age = 20;
+    info.height = 180;
+
+    var json = JSON.stringify(info);
+    console.log(json);
+
+</script>
+</body>
+</html>

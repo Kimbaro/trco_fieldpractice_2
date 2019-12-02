@@ -1,0 +1,82 @@
+{
+  "trco_id": "test2",
+  "trco_pw": "testpw",
+  "info": [
+    {
+      "name": "홍길동",
+      "birth": "950811",
+      "tell": "01022115925",
+      "address": "대전 동구 용운동 대전대학교",
+      "email": 'azxcv1329@gmail.com"
+    }
+  ],
+  "user": [
+    {
+      "height": '180',
+      "weight": '50',
+      "sex": '남'
+    }
+  ]
+}
+
+
+{
+  "userId": "4b866f08234ae01d21d89604",
+  "time": 1569131700000,
+  "fvc_meas": 4.469,
+  "fvc_pred": 4.46,
+  "fvc_pred_avg": 105.2,
+  "fev_meas": 4.23,
+  "fev_pred": 4.36,
+  "fev_pred_avg": 97.0,
+  "fevfvc_meas": 90.19,
+  "fevfvc_pred": 83.21,
+  "fevfvc_pred_avg": 108.3,
+  "fef25_meas": 10.03,
+  "fef50_meas": 6.41,
+  "fef75_meas": 2.81
+}
+
+{
+  "userId": "4b866f08234ae01d21d89604",
+  "time": 1569131700000,
+  "MIP": -11,
+  "MEP": 11
+}
+
+{
+  "userId": "4b866f08234ae01d21d89604",
+  "time": 1569131700000,
+  "type": 1,
+  "fvc_meas":,
+  "fvc_pred":,
+  "fvc_pred_avg":,
+  "fev_meas":,
+  "fev_pred":,
+  "fev_pred_avg":,
+  "fevfvc_meas":,
+  "fevfvc_pred":,
+  "fevfvc_pred_avg":,
+  "fef25_meas":,
+  "fef25_pred":,
+  "fef25_pred_avg":,
+  "fef50_meas":,
+  "fef50_pred":,
+  "fef50_pred_avg":,
+  "fef75_meas":,
+  "fef75_pred":,
+  "fef75_pred_avg":,
+  "mip": -11,
+  "mep": 11
+}
+
+
+
+
+userId=4b866f08234ae01d21d89604&time=1569131700000&fvc_meas=4.469&fvc_pred=4.46&fvc_pred_avg=105.2&fev_meas=4.23&fev_pred=4.36&fev_pred_avg=97.0&fevfvc_meas=90.19&fevfvc_pred=83.21&fevfvc_pred_avg=108.3&fef25_meas=10.03&fef25_pred=8.60&fef25_pred_avg=116.6&fef50_meas=6.41&fef50_pred=6.27&fef50_pred_avg=102.2&fef75_meas=2.81&fef75_pred=3.54&fef75_pred_avg=79.4
+
+trcoId=test2&trcoPw=testPW&name=kim&birth=950811&tell=01022115925&address=asdasdasdas&email=azxcv1329@gmail.com&height=180&weight=50&sex=여
+userId=5d9948d11f9ecd936b060d53&time=1570462034007&MIP=24.33&MEP=-24.33
+userId=5d9948d11f9ecd936b060d53&time=1570468523287&FVC=2.99&FEV1=2.33&FVC_avg=3.99&FEV1_avg=2.66&FEV1nFVC=66&FEV1nFVC_avg=86
+
+

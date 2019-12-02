@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+    <script src="../util/readParam.js"></script>
+    <script src="../util/dateFormat.js"></script>
+    <script src="../util/jquery.dynatable.js"></script>
+    <link rel="stylesheet" type="text/css" href="../util/jquery.dynatable.css">
+    <style type="text/css">
+        .new_table {
+            width: 100%;
+        }
+
+        .new_table caption {
+            font-size: 0;
+            position: absolute;
+            left: -9999px;
+            top: -9999px;
+            line-height: 0
+        }
+
+        .new_table th {
+            font-size: 14px;
+            font-weight: 400;
+            padding: 16px 0;
+            background: #fafafa;
+            border-bottom: 1px solid #ddd
+        }
+
+        .new_table th button {
+            border: 0 none;
+            display: inline-block;
+            padding: 5px 5px 6px;
+            font-size: 11px;
+            margin: 0 2px;
+            border-radius: 3px;
+            cursor: pointer;
+            background: #112f41;
+            color: #fff;
+            outline: 0 none
+        }
+
+        .new_table th button.active {
+            background: #ed553b;
+            color: #fff
+        }
+
+        .new_table td {
+            font-size: 14px;
+            font-weight: 400;
+            text-align: center !important;
+            padding: 14px 0;
+            border-bottom: 1px solid #ddd
+        }
+
+    </style>
+</head>
+<body>
+<div class="table_box">
+    <div class="table_inner_box wd1280">
+        <table cellpadding="0" cellspacing="0" class="new_table" id="my-table">
+            <caption>
+                정렬하기
+            </caption>
+            <colgroup>
+                <col style="width:5%"/>
+                <col style="width:24%"/>
+                <col style="width:12%"/>
+                <col style="width:5%"/>
+            </colgroup>
+            <thead>
+            <tr>
+                <th>No</th>
+                <th>측정일시
+                    <button class="up">오름차순</button>
+                    <button class="down">내림차순</button>
+                </th>
+                <th>항목</th>
+                <th>선택</th>
+            </tr>
+            </thead>
+            <tbody id="tbody">
+
+            </tbody>
+        </table>
+    </div>
+</div>
+<script>
+    // ?id=4b866f08234ae01d21d89604
+    var id = getParameterByName("id");
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function () { // 요청에 대한 콜백
+        if (xhr.readyState === xhr.DONE) { // 요청이 완료되면
+            if (xhr.status === 200 || xhr.status === 201) {
+                console.log(xhr.responseText);
+                var data = JSON.parse(xhr.responseText);
+                console.log(data);
+                for (var i = 0; i < data.length; i++) {
+                    //document.getElementById("json").innerHTML += data[i].name + ", " + data[i].heart + ", " + data[i].age + "<br>";
+                    callbackFunction(i, data[i].time, data[i].type, data[i]);
+                }
+            } else {
+                console.error(xhr.responseText);
+
+            }
+        }
+    };
+    var request_url = 'http://localhost:8080/find_history?id=' + id;
+    var url = '/폐기능검사/test.html';
+    xhr.open('POST', request_url); // 메소드와 주소 설정
+    xhr.send(); // 요청 전송
+    // xhr.abort(); // 전송된 요청 취소
+
+    var tbd = document.getElementById("tbody");
+
+
+    function tt() {
+        console.log("asdas");
+    }
+
+    function callbackFunction(index, time, type, jsonData) {
+        var tr = document.createElement('tr');
+        var td0 = document.createElement('td');
+        td0.appendChild(document.createTextNode(index + 1));
+
+        var td1 = document.createElement('td');
+        td1.appendChild(document.createTextNode(time + date_to_str(new Date(time))));
+
+        var td2 = document.createElement('td');
+        if (type == 0) {
+            td2.appendChild(document.createTextNode("폐기능검사"));
+        } else {
+            td2.appendChild(document.createTextNode("호흡근력검사"));
+        }
+        var td3 = document.createElement('td');
+        img = new Image();
+        img.src = "../img/search.png";
+        img.width = 50;
+        img.onclick = function () {
+            location.href = '../폐기능검사/test.html?id=' + encodeURIComponent(JSON.stringify(jsonData));
+            //location.replace('../폐기능검사/test.html?id=' +encodeURIComponent(JSON.stringify(jsonData)));
+        }
+        td3.appendChild(img);
+
+
+        tr.appendChild(td0);
+        tr.appendChild(td1);
+        tr.appendChild(td2);
+        tr.appendChild(td3);
+
+        tbd.appendChild(tr);
+    }
+
+    console.log(getParameterByName("id"));
+</script>
+
+<script type="text/javascript">
+    // 테이블 재 세팅
+    var table_html;
+
+    function re_table(line, cols, table_position) {
+        table_html = "";
+        for (var i = 0; i < line; i++) {
+            table_html += "<tr>";
+            for (var j = 0; j < cols; j++) {
+                table_html += "<td>" + new_array[i][j] + "</td>";
+            }
+            table_html += "</tr>";
+        }
+        $(table_position.find("tbody")).html(table_html);
+    }
+
+
+    $(document).ready(function () {
+        var text_array;
+
+        $("button.up, button.down").on("click", function () {
+            var $this = $(this);
+            var $this_table = $this.parents("table");
+            var $this_start_number = $this.parent().index();
+
+            var table_th_length = $this.parents("table").find("thead th").length; //테이블 칸의 갯수
+            var table_tr_length = $this.parents("table").find("tbody tr").length; //테이블 내용 줄 갯수
+
+            new_array = new Array();
+            for (var i = 0; i < table_tr_length; i++) {
+                new_array[i] = [];
+                for (var j = 0; j < table_th_length; j++) {
+                    text_array = $this_table.find("tbody tr").eq(i).find("td").eq(j).text(); // 값땡겨오는거
+                    new_array[i][j] = text_array;
+                }
+            }
+
+            //테이블 클래스 active 지정
+            $this_table.find("th button").removeClass("active");
+            $this.addClass("active");
+
+            /* 정렬 */
+            new_array.sort(function (a, b) {
+                if ($this.hasClass("up")) {
+                    return a[$this_start_number] < b[$this_start_number] ? -1 : a[$this_start_number] > b[$this_start_number] ? 1 : 0;
+                } else {
+                    return a[$this_start_number] > b[$this_start_number] ? -1 : a[$this_start_number] < b[$this_start_number] ? 1 : 0;
+                }
+            });
+
+            //값이 들어오는지 확인 소스
+            //console.log(new_array);
+
+            $this_table.find("tbody").empty();
+            re_table(table_tr_length, table_th_length, $this_table);
+        });
+    })
+</script>
+</body>
+</html>
