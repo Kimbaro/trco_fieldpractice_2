@@ -3,13 +3,13 @@
 
 TRco 인턴쉽에서 개발한 Proto타입의 프로젝트
 
-unitybuild_app : Unity3D 프로젝트 이며 마지막 수정일자 2019-12-01_02 로 Unity 개발 마무리.
+unitybuild_app :  마지막 수정일자 2019-12-01_02 로  Unity3D 안드로이드 변환 한 프로젝트와 안드로이드 Native Java Module를 import한 최종본
 
-unity : Unity3D에서 안드로이드 프로젝트로 변환 한 기본 앱
+unity : Unity3D 프로젝트
 
 server : Proto타입 어플리케이션에 활용된 server
 
-module_app : Unity3D 안드로이드 변환 한 프로젝트와 안드로이드 Native Java Module를 import한 최종본
+module_app : 안드로이드 Native Java Module의 모듈을 담아둔 프로젝트
 
 key : TRco GCP에 접근하기 위한 키 파일, 
 ===================================
