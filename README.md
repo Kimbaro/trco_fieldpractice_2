@@ -12,6 +12,7 @@ server : Proto타입 어플리케이션에 활용된 server
 module_app : 안드로이드 Native Java Module의 모듈을 담아둔 프로젝트
 
 key : TRco GCP에 접근하기 위한 키 파일, 
+
 ===================================
 
 # 호흡기 디바이스 커스텀 프로토콜
